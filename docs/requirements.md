@@ -9,19 +9,19 @@ The goal of this project is to remake Dataman, an educational math toy from the 
 Use at least four concise evidence statements. Label the source of each.
 
 - **E-01 — Source:** Stakeholder Elicitation sim.	
-  **Evidence:** "The primary learner is a student practicing independently, often with a teacher or parent nearby."
+**Evidence:** "The primary learner is a student practicing independently, often with a teacher or parent nearby."
 
 - **E-02 — Source:** Stakeholder Elicitation sim.
-  **Evidence:** "Stakeholders say modern means the experience should work reliably in a browser, be understandable without a printed manual, and avoid making the learner navigate unnecessary screens."
+**Evidence:** "Stakeholders say modern means the experience should work reliably in a browser, be understandable without a printed manual, and avoid making the learner navigate unnecessary screens."
 
 - **E-03 — Source:** M2.3 Elicitation Case
-  **Evidence:** Ms. Alvarez stated that students were getting frustrated. It is revealed that the learners would start the Answer Checker, get a problem wrong twice, and not understand what was happening when the device displayed the wrong answer.
+**Evidence:** Ms. Alvarez stated that students were getting frustrated. It is revealed that the learners would start the Answer Checker, get a problem wrong twice, and not understand what was happening when the device displayed the wrong answer.
 
 - **E-04 — Source:** Stakeholder Elicitation sim.
-  **Evidence:** Stakeholders (teachers) report that the students may pause their practice and come back at a later time.
+**Evidence:** Stakeholders (teachers) report that the students may pause their practice and come back at a later time.
 
 - **E-05 — Source:** Stakeholder Elicitation sim.
-  **Evidence:** In the simulation, it was said that students may end up using the application on a variety of devices (Chromebooks, phones, and home computers). Sessions may be terminated before the students intentionally sign out.
+**Evidence:** In the simulation, it was said that students may end up using the application on a variety of devices (Chromebooks, phones, and home computers). Sessions may be terminated before the students intentionally sign out.
 
 
 ## Functional Requirements
