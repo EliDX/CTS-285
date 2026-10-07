@@ -8,16 +8,16 @@ The goal of this project is to remake Dataman, an educational math toy from the 
 
 Use at least four concise evidence statements. Label the source of each.
 
-- **E-01 — Source:** Stakeholder Elicitation sim. 
+- **E-01 — Source:** Stakeholder Elicitation sim.
   **Evidence:** "The primary learner is a student practicing independently, often with a teacher or parent nearby."
 
-- **E-02 — Source:** Stakeholder Elicitation sim. 
+- **E-02 — Source:** Stakeholder Elicitation sim.
   **Evidence:** "Stakeholders say modern means the experience should work reliably in a browser, be understandable without a printed manual, and avoid making the learner navigate unnecessary screens."
 
 - **E-03 — Source:** M2.3 Elicitation Case
   **Evidence:** Ms. Alvarez stated that students were getting frustrated. It is revealed that the learners would start the Answer Checker, get a problem wrong twice, and not understand what was happening when the device displayed the wrong answer.
 
-- **E-04 — Source:** Stakeholder Elicitation sim. 
+- **E-04 — Source:** Stakeholder Elicitation sim.
   **Evidence:** Stakeholders (teachers) report that the students may pause their practice and come back at a later time.
 
 - **E-05 — Source:** Stakeholder Elicitation sim.
@@ -29,7 +29,7 @@ Use at least four concise evidence statements. Label the source of each.
 Write at least four functional requirements. Each requirement should describe a capability or behavior the system must provide.
 
 ### FR-01
-**Requirement:** The application must save student data between sessions.  
+**Requirement:** The application must save student data between sessions.
 **Source/Rationale:** The 4th piece of evidence led to this conclusion. Students may leave and come back to the applicaton.
 
 ### FR-02
@@ -37,11 +37,11 @@ Write at least four functional requirements. Each requirement should describe a 
 **Source/Rationale:** Students were having difficulty knowing when they got something wrong (mentioned in the 3rd piece of evidence). There must be indicators that allow students to know how many attempts they have left before the answer is displayed.
 
 ### FR-03
-**Requirement:** The application must be able to function on multiple devices.  
+**Requirement:** The application must be able to function on multiple devices.
 **Source/Rationale:** In the 5th piece of evidence stakeholders informed us that students may access the application from chrome books, phones, and home computers. The application must function on all of these.
 
 ### FR-04
-**Requirement:** The application must be able to function as a web application.  
+**Requirement:** The application must be able to function as a web application.
 **Source/Rationale:** Stakeholders have stated in the 2nd piece of evidence that the application must be able to work in a browser.
 
 
@@ -50,7 +50,7 @@ Write at least four functional requirements. Each requirement should describe a 
 Write at least three non-functional requirements. Each requirement should describe a measurable quality, constraint, or condition the system must satisfy.
 
 ### NFR-01
-**Requirement:** The application must have an interface which is self-documenting. (eg. no outside resource should be needed to understand and use it).  
+**Requirement:** The application must have an interface which is self-documenting. (eg. no outside resource should be needed to understand and use it).
 **Source/Rationale:** Stakeholders have stated that the interface should be simple enough to understand without a printed manual. The data man device itself also mentions how it was designed to be simple enough for small children to use as well.
 
 ### NFR-02
