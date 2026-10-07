@@ -8,7 +8,7 @@ The goal of this project is to remake Dataman, an educational math toy from the 
 
 Use at least four concise evidence statements. Label the source of each.
 
-- **E-01 — Source:** Stakeholder Elicitation sim.
+- **E-01 — Source:** Stakeholder Elicitation sim.	
   **Evidence:** "The primary learner is a student practicing independently, often with a teacher or parent nearby."
 
 - **E-02 — Source:** Stakeholder Elicitation sim.
