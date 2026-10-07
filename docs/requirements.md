@@ -1,43 +1,94 @@
-# M2 Elicitation Decision Record
+# DataMan Requirements Register
 
-## Investigation Path
-1. What does “modern” need to mean from a user perspective?
-   Evidence revealed: Stakeholders say modern means the experience should work reliably in a browser, be understandable without a printed manual, and avoid making the learner navigate unnecessary screens. They do not specify a visual style or framework.
-2. Who will use the system and in what setting?
-   Evidence revealed: The primary learner is a student practicing independently, often with a teacher or parent nearby. Exact device and access conditions have not yet been confirmed.
-3. What exactly do stakeholders mean by “students shouldn’t lose their work”?
-   Evidence revealed: Teachers report that students may pause practice and return later. They want a learner’s saved practice state to remain available after leaving and returning to the application.
+> Replace all bracketed prompts with your own project evidence and requirements. Delete the prompts before submitting.
 
-## Initial Position
-**Supported evidence:**
-The application will need to function in a browser, and be easy enough to understand without a dedicated manual. It will mainly be used by students, though parents and teachers may observe the student using the application. Students need to be able to stop working and come back with progress intact.
+## Project Context
 
-**Remaining uncertainty:**
-What kind of info do the parents need to know about what the child is doing? Should the layout be exactly like the dataman of the past or be more "modern"?
+[In 2–4 sentences, identify the DataMan modernization goal, the primary users, and the problem the project is trying to solve.]
 
-**Likely functional requirement:**
-The user should be able to save progress in-between sessions.
+## Evidence Notes
 
-**Likely non-functional requirement / quality constraint:**
-The user should be able to change the theme of the application (light, dark, colors).
+Use at least four concise evidence statements. Label the source of each.
 
-**Assumption or proposed solution I am not treating as confirmed:**
-The user's data should be saved in the devices cookies.
+- **E-01 — Source:** [DataMan manual / elicitation case / simulation / other confirmed source]  
+  **Evidence:** [What does the source tell you?]
 
-**Why my initial position is defensible:**
-I used the information provided to me from the questions asked, and made sure that any claims I made are supported by those answers.
+- **E-02 — Source:** [source]  
+  **Evidence:** [evidence statement]
 
-## Complication
-Students may use DataMan on school Chromebooks, phones, tablets, and home computers. Some sessions may be interrupted before intentional sign-out.
+- **E-03 — Source:** [source]  
+  **Evidence:** [evidence statement]
 
-**What this affects:**
-How the framework for the assignment will work.
+- **E-04 — Source:** [source]  
+  **Evidence:** [evidence statement]
 
-**What I revised, if anything:**
-The requirements stay the same, but how they are implemented will need to accommodate this new info.
+[Add additional evidence notes if needed.]
 
-**Final decision and reasoning:**
-I will keep my requirements. They are unaffected by the new info. The only think that will need to change is the actual implementation, which we did not go over yet.
+## Functional Requirements
 
-## Next Project Action
-Use this evidence to update the DataMan Requirements Register and preserve any unresolved questions as open assumptions or follow-up items.
+Write at least four functional requirements. Each requirement should describe a capability or behavior the system must provide.
+
+### FR-01
+**Requirement:** The system must [capability/behavior].  
+**Source/Rationale:** [Evidence or stakeholder need that supports this requirement.]
+
+### FR-02
+**Requirement:** The system must [capability/behavior].  
+**Source/Rationale:** [Evidence or stakeholder need that supports this requirement.]
+
+### FR-03
+**Requirement:** The system must [capability/behavior].  
+**Source/Rationale:** [Evidence or stakeholder need that supports this requirement.]
+
+### FR-04
+**Requirement:** The system must [capability/behavior].  
+**Source/Rationale:** [Evidence or stakeholder need that supports this requirement.]
+
+[Add additional functional requirements if needed.]
+
+## Non-Functional Requirements
+
+Write at least three non-functional requirements. Each requirement should describe a measurable quality, constraint, or condition the system must satisfy.
+
+### NFR-01
+**Requirement:** The system must [measurable quality/constraint/condition].  
+**Source/Rationale:** [Evidence or project constraint that supports this requirement.]
+
+### NFR-02
+**Requirement:** The system must [measurable quality/constraint/condition].  
+**Source/Rationale:** [Evidence or project constraint that supports this requirement.]
+
+### NFR-03
+**Requirement:** The system must [measurable quality/constraint/condition].  
+**Source/Rationale:** [Evidence or project constraint that supports this requirement.]
+
+[Add additional non-functional requirements if needed.]
+
+## Open Questions / Assumptions
+
+Do not turn an unsupported idea into a confirmed requirement. Record unresolved items here until evidence supports a decision.
+
+- **Q-01:** [What still needs to be clarified or confirmed?]
+- **Q-02:** [What still needs to be clarified or confirmed?]
+
+[Add or remove items as appropriate.]
+
+## Final Quality Check
+
+Before submitting, confirm that each requirement is:
+
+- [ ] Clear enough for another team member to interpret consistently.
+- [ ] Supported by evidence, a stakeholder need, or a confirmed project constraint.
+- [ ] Testable or verifiable later.
+- [ ] Solution-neutral enough for this stage of the project.
+- [ ] Focused on one main capability or quality.
+- [ ] Classified correctly as functional or non-functional.
+
+Also confirm:
+
+- [ ] At least four functional requirements are included.
+- [ ] At least three non-functional requirements are included.
+- [ ] Every confirmed requirement has a source/rationale.
+- [ ] Open questions and assumptions are separated from confirmed requirements.
+- [ ] The simulation decision record is saved at `docs/decisions/m2-elicitation-decision-record.md`.
+- [ ] This file is saved as `docs/requirements.md`, committed, and synced to GitHub.
