@@ -2,11 +2,11 @@
 
 
 ## Project Context
-The goal of this project is to remake Dataman, an educational math toy from the 1970's. The goal is to convert it into a web-based application that will be used in classrooms to aid teachers and parents in getting children to learn math, 
+The goal of this project is to remake Dataman, an educational math toy from the 1970's. The goal is to convert it into a web-based application that will be used in classrooms to aid teachers and parents in getting children to learn math.
+
 
 ## Evidence Notes
 
-Use at least four concise evidence statements. Label the source of each.
 
 - **E-01 — Source:** Stakeholder Elicitation sim.  
 **Evidence:** "The primary learner is a student practicing independently, often with a teacher or parent nearby."
@@ -23,69 +23,51 @@ Use at least four concise evidence statements. Label the source of each.
 - **E-05 — Source:** Stakeholder Elicitation sim.  
 **Evidence:** In the simulation, it was said that students may end up using the application on a variety of devices (Chromebooks, phones, and home computers). Sessions may be terminated before the students intentionally sign out.
 
+- **E-06 — Source:** Dataman Manual (Hints for Parents and Teachers: Fun and Positive Reinforcement).    
+**Evidence:** "DataMan motivates your child positively by rewarding right answers and good scores with a dazzling 'light show.' He also reacts to incorrect answers immediately with a simple 'EEE' indication in the display, followed by a brief 'blinking light' pattern."  
+
 
 ## Functional Requirements
 
-Write at least four functional requirements. Each requirement should describe a capability or behavior the system must provide.
 
 ### FR-01
-**Requirement:** The application must save student data between sessions.  
-**Source/Rationale:** The 4th piece of evidence led to this conclusion. Students may leave and come back to the applicaton.
+**Requirement:** The application must automatically save a students practice progress between/during authenticated sessions.  
+**Source/Rationale:** The E-04 led to this conclusion. Students may leave and come back to the application, and some sessions may end before they are intended to. In order to make sure students do not lose their progress, the sessions progress must be saved regularly.
 
 ### FR-02
-**Requirement:** The application must properly indicate how many attempts are left (for Answer Checker/ related modes).  
-**Source/Rationale:** Students were having difficulty knowing when they got something wrong (mentioned in the 3rd piece of evidence). There must be indicators that allow students to know how many attempts they have left before the answer is displayed.
+**Requirement:** The application must clearly indicate how many attempts are left (for Answer Checker/ related modes).  
+**Source/Rationale:** Students were having difficulty knowing when they got something wrong (mentioned in E-03). There must be indicators that allow students to know how many attempts they have left before the answer is displayed.
 
 ### FR-03
-**Requirement:** The application must be able to function on multiple devices.  
-**Source/Rationale:** In the 5th piece of evidence stakeholders informed us that students may access the application from chrome books, phones, and home computers. The application must function on all of these.
+**Requirement:** The application must clearly and unmistakably indicate when a problem is answered correctly.   
+**Source/Rationale:** The original Dataman device (refer to E-06) states how the original device has a clear and unmistakable response to correct answers. 
 
 ### FR-04
-**Requirement:** The application must be able to function as a web application.  
-**Source/Rationale:** Stakeholders have stated in the 2nd piece of evidence that the application must be able to work in a browser.
+**Requirement:**  The application must clearly indicate when a problem is answered incorrectly.
+**Source/Rationale:** As mentioned in E-06, the device must also clearly indicate when an answer is incorrect. In E-03 Ms. Alvarez mentions how students did not fully understand when they were getting problems wrong, which exacerbated the issue many had with the unclear amount of attempts.
 
 
 ## Non-Functional Requirements
 
-Write at least three non-functional requirements. Each requirement should describe a measurable quality, constraint, or condition the system must satisfy.
 
 ### NFR-01
 **Requirement:** The application must have an interface which is self-documenting. (eg. no outside resource should be needed to understand and use it).  
 **Source/Rationale:** Stakeholders have stated that the interface should be simple enough to understand without a printed manual. The data man device itself also mentions how it was designed to be simple enough for small children to use as well.
 
 ### NFR-02
-**Requirement:** The application must be lightweight enough to run on low-end devices.  
-**Source/Rationale:** It is stated that the application will need to work on many devices, namely home computers and mobile phones. Students need to be able to use the application no matter what their specifications on these devices are.
+**Requirement:** The application must be able to function on multiple devices.  
+**Source/Rationale:** In E-04 stakeholders informed us that students may access the application from chrome books, phones, and home computers. The application must function on all of these.
 
 ### NFR-03
-**Requirement:** The application's interactive elements must be responsive and easy to scale to a variety of screen sizes.  
-**Source/Rationale:** The application will be used on many devices, as stated before. It needs to be able to be displayed properly on all of those different devices!
+**Requirement:** The application must be able to function as a web application.  
+**Source/Rationale:** Stakeholders have stated in E-02 of evidence that the application must be able to work in a browser.
 
 ## Open Questions / Assumptions
 
-Do not turn an unsupported idea into a confirmed requirement. Record unresolved items here until evidence supports a decision.
 
-- **Q-01:** Should all of the original Datamans built in functionalities should be implemented into this web application?  
-- **Q-02:** Should teachers be able to assign students specific questions to practice, similarly to Datamans "Memory Bank"?
+- **Q-01:** Should all of the original Datamans built in functionalities should be implemented into this web application?      
+- **Q-02:** Should teachers be able to assign students specific questions to practice, similarly to Datamans "Memory Bank"?    
+- **Q-03:** What are the requirements for performance? Should the application be optimized for chromebooks or should it stay as lightweight as possible in order to work on the largest variety of devices?  
+- **Q-04:** Will teachers/parents be able to see progress in the application itself? Additionally, how will student progress be saved (eg. after every question answered?)  
 
 
-## Final Quality Check
-(I was unsure if I should delete this portion so I added check marks to the boxes.)
-
-Before submitting, confirm that each requirement is:
-
-- [✅] Clear enough for another team member to interpret consistently.
-- [✅] Supported by evidence, a stakeholder need, or a confirmed project constraint.
-- [✅] Testable or verifiable later.
-- [✅] Solution-neutral enough for this stage of the project.
-- [✅] Focused on one main capability or quality.
-- [✅] Classified correctly as functional or non-functional.
-
-Also confirm:
-
-- [✅] At least four functional requirements are included.
-- [✅] At least three non-functional requirements are included.
-- [✅] Every confirmed requirement has a source/rationale.
-- [✅] Open questions and assumptions are separated from confirmed requirements.
-- [✅] The simulation decision record is saved at `docs/decisions/m2-elicitation-decision-record.md`.
-- [✅] This file is saved as `docs/requirements.md`, committed, and synced to GitHub.
