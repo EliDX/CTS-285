@@ -1,8 +1,5 @@
 # DataMan Product Backlog
 
-> Replace every bracketed prompt with your own work. Delete the prompts, this note, and any unused story blocks before you submit.
-> Save this file as `docs/product-backlog.md`. Use that exact folder, file name, and lowercase spelling.
-
 ## Sources
 
 This backlog uses these files from my repository:
@@ -11,26 +8,46 @@ This backlog uses these files from my repository:
 - `docs/decisions/m3-backlog-triage-record.md`
 - `docs/decisions/m3-product-owner-decision-record.md`
 
-[If you revised `docs/requirements.md` after Module 2, state that here in one sentence.]
+The file `docs/requirements.md` was revised after its initial submission.
 
 ## Priority Order
 
 List every story ID from highest priority to lowest. The story blocks below must appear in this same order.
 
-1. [US-__]
-2. [US-__]
-3. [US-__]
-4. [US-__]
+1. US-01
+2. US-02
+3. US-03
+4. US-04
 
 ## Stories
 
-<!-- Copy one story block for each story. Do not change the field labels. -->
+### US-01 — Implement indicators for when an answer is correct/incorrect.
 
-### US-01 — [Short title]
+**Requirement ID:** FR-03, FR-04.
 
-**Requirement ID:** [FR-__ or NFR-__ from `docs/requirements.md`. If the story traces to more than one requirement, list each ID.]
+**User Story:** As a student, I want to clearly know whether or not I got an answer correct so that I can understand the results of my practice sessions better.
 
-**User Story:** As a [user or role], I want [capability or outcome] so that [value or reason].
+**Acceptance Criteria:**
+
+- Given [starting condition], when [action or event], then [observable result].
+
+**Relative Effort:** [S / M / L] — [comparison]
+
+**Dependency / Constraint:** [dependency, constraint, or None]
+
+**Priority:** 2
+
+**Readiness:** [Move Forward / Refine / Defer]
+
+**Priority Rationale:** [reason]
+
+---
+
+### US-02 — Implement attempt counter.
+
+**Requirement ID:** FR-02
+
+**User Story:** As a student, I want indication on how many attempts I have left so that I can understand when I will be taken to the next practice problem.
 
 **Acceptance Criteria:**
 
@@ -49,29 +66,49 @@ List every story ID from highest priority to lowest. The story blocks below must
 
 ---
 
-### US-02 — [Short title]
+### US-03 — Implement system to save user practice progress.
 
-**Requirement ID:** [FR-__ / NFR-__]
+**Requirement ID:** FR-01
 
-**User Story:** As a [user or role], I want [capability or outcome] so that [value or reason].
+**User Story:** As a student, I want to be able to save my practice progress so that I can continue from where I left off if/when I choose to stop.
+
+**Acceptance Criteria:**
+
+- Given a student has started an authenticated practice session, when the session is either intentionally or unintentionally ended, then their progress will be available when they access the application again..
+
+
+**Relative Effort:** [S / M / L] — [One sentence. Compare this story to the other stories in this backlog, not to hours or days.]
+
+**Dependency / Constraint:** A system to properly authenticate users must exist first, if this 
+
+**Priority:** [Rank number from the Priority Order list.]
+
+**Readiness:** [Move Forward / Refine / Defer]
+
+**Priority Rationale:** [Why this rank is defensible. Name the factors you used: value, effort, dependency, risk, uncertainty, or stakeholder need.]
+
+---
+
+### US-04 — 
+
+**Requirement ID:** NFR-02, NFR-03, FR-01
+
+**User Story:** As a teacher I want students to be able to use the application on multiple devices so that they can still practice outside of school.
 
 **Acceptance Criteria:**
 
 - Given [starting condition], when [action or event], then [observable result].
+- [Write one line for each condition. Each line must state a result that another person can see and check.]
 
-**Relative Effort:** [S / M / L] — [comparison]
+**Relative Effort:** [S / M / L] — [One sentence. Compare this story to the other stories in this backlog, not to hours or days.]
 
-**Dependency / Constraint:** [dependency, constraint, or None]
+**Dependency / Constraint:** 
 
-**Priority:** [rank]
+**Priority:** [Rank number from the Priority Order list.]
 
-**Readiness:** [Move Forward / Refine / Defer]
+**Readiness:** Refine
 
-**Priority Rationale:** [reason]
-
----
-
-<!-- A non-functional requirement (NFR) can become its own story. It can also become a constraint or an acceptance criterion on another story. If you use it as a constraint, put its ID in that story's Requirement ID field. -->
+**Priority Rationale:** [Why this rank is defensible. Name the factors you used: value, effort, dependency, risk, uncertainty, or stakeholder need.]
 
 ## Open Questions Carried Forward
 
@@ -86,15 +123,4 @@ State what changed in this backlog because of your triage record and your Produc
 - [Story ID — what changed — which record caused the change.]
 - [If nothing changed, say so, and say why the original decision still holds.]
 
-## Before You Submit
 
-- [ ] The file path is exactly `docs/product-backlog.md`.
-- [ ] All bracketed prompts and unused story blocks are deleted.
-- [ ] Every story has all eight required fields: Story ID, Requirement ID, User Story, Acceptance Criteria, Relative Effort, Dependency / Constraint, Priority, Priority Rationale.
-- [ ] Every Requirement ID exists in `docs/requirements.md`.
-- [ ] Each acceptance criterion states a result another person can observe and check.
-- [ ] The story blocks follow the Priority Order list.
-- [ ] Large or uncertain stories are marked Refine or Defer, not hidden as Move Forward.
-- [ ] No story or criterion names a framework, database, or screen layout, unless a requirement makes it a constraint.
-- [ ] The file renders correctly on GitHub.
-- [ ] The change is committed with a message that describes it.
