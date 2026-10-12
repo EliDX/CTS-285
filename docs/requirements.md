@@ -15,7 +15,7 @@ The goal of this project is to remake Dataman, an educational math toy from the 
 **Evidence:** "Stakeholders say modern means the experience should work reliably in a browser, be understandable without a printed manual, and avoid making the learner navigate unnecessary screens."
 
 - **E-03 — Source:** M2.3 Elicitation Case  
-**Evidence:** Ms. Alvarez stated that students were getting frustrated. It is revealed that the learners would start the Answer Checker, get a problem wrong twice, and not understand what was happening when the device displayed the wrong answer.
+**Evidence:** Ms. Alvarez stated that students were getting frustrated. It is revealed that the learners would start the Answer Checker, get a problem wrong twice, and not understand what was happening when the device displayed the right answer.
 
 - **E-04 — Source:** Stakeholder Elicitation sim.  
 **Evidence:** Stakeholders (teachers) report that the students may pause their practice and come back at a later time.
