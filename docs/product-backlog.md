@@ -29,15 +29,17 @@ List every story ID from highest priority to lowest. The story blocks below must
 
 **Acceptance Criteria:**
 
+- Given a student or other user is using a feature which has incorrect/correct answers, when [action or event], then [observable result].
+
 - Given [starting condition], when [action or event], then [observable result].
 
-**Relative Effort:** [S / M / L] — [comparison]
+**Relative Effort:** Small
 
 **Dependency / Constraint:** [dependency, constraint, or None]
 
-**Priority:** 2
+**Priority:** 1
 
-**Readiness:** [Move Forward / Refine / Defer]
+**Readiness:** Move Forward
 
 **Priority Rationale:** [reason]
 
