@@ -35,7 +35,18 @@ def main():
 
         if choice == '1':
             # Will call the pyhton function that runs the 'Answer Checker' function.
-            print("\nTesting... Testing... Choice chosen!!!!")
+            print("'Answer Checker' selected!")
+            print("-"*20 + "HOW TO USE ANSWER CHECKER" + "-"*20)
+            print("\nUse this function to build and solve a math problem.")
+            print("You'll enter the first digit, what operation to use (add, subtract, divide, or multiply), and what you think the answer will be.")
+            print("The answer checker will then check if the answer to your problem was correct.")
+            print("You'll have three attempts to get it right, then the correct answer will be revealed!\n")
+
+            num1 = input("Enter the first number: ")
+            
+            num2 = input("Enter the second number: ")
+
+            operator = input("placeholder")
             pass
 
         elif choice == '2':
