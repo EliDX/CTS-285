@@ -8,6 +8,9 @@ def calculate_answer(num1, operator, num2, user_answer):
     Calculate the answer to a math problem created by the user.
     Used in the Answer Checker function.
     '''
+
+    # The function itself converts everything into integers.
+    # This creates less issues with the frontend in the future.
     num1 = int(num1)
     num2 = int(num2)
     user_answer = int(user_answer)
