@@ -39,15 +39,17 @@ def main():
         if choice == '1':
             # Will call the pyhton function that runs the 'Answer Checker' function.
             print("'Answer Checker' selected!")
-            print("-"*20 + "HOW TO USE ANSWER CHECKER" + "-"*20)
+            print("-"*20 + " HOW TO USE ANSWER CHECKER " + "-"*20)
+
             print("\nUse this function to build and solve a math problem.")
+            # I opted for building the problem piece by piece, as this made it easier to put into the logic function.
             print("You'll enter the first digit, what operation to use (add, subtract, divide, or multiply), and what you think the answer will be.")
             print("The answer checker will then check if the answer to your problem was correct.")
             print("You'll have three attempts to get it right, then the correct answer will be revealed!\n")
 
-            
             num1 = input("Enter the first number: ").strip()
 
+            # Input validation.
             while not num1.isdigit():
                 print("Please enter a valid number.")
                 num1 = input("Enter the first number: ").strip()
@@ -55,31 +57,34 @@ def main():
 
             operation = input("Add (+), Subtract(-), Multiply(*), or Divide(/): ").strip()
 
+            # Input validation.
             while operation not in fn.MATH_SYMBOLS:
                 print("Please enter a valid operator.")
                 operation = input("Add (+), Subtract(-), Multiply(*), or Divide(/): ").strip()
             
             num2 = input("Enter the second number: ")
 
+            # Input validation.
             while not num2.isdigit():
                 print("Please enter a valid number.")
                 num2 = input("Enter the second number: ").strip()
-
-            
 
             # I though about putting this part in the logic layer, but since its just display
             # and not any actual calculations, I kept it here.
             print(f"\nYour math problem: {num1} {operation} {num2} = ?")
             answer = input("Enter your answer: ")
 
-            # Program calculates answer a
+            correct = fn.calculate_answer(num1, operation, num2, answer)
+            print(correct)
 
-            
-            pass
+            # Program calculates answer and if user answer was correct.
+            # TODO: Add attempt counter. Prompt user to redo this function or select another.
+
 
         elif choice == '2':
             # Will call the python function that runs the 'Memory Bank' function.
-            print("\nTesting... Testing... Choice chosen???")
+            print("\n'Memory Bank' selected!")
+            print("This function is still a work in progress. Please choose another.")
             pass
 
         elif choice == '3':
