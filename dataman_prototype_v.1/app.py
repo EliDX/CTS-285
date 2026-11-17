@@ -2,13 +2,16 @@
 # 11/9/2026
 # CTS-285
 
+import logic as fn
+
+
 def menu():
     '''
     Displays the menu options.
     '''
     print("""
 1) Answer Checker
-2) Memory Bank
+2) Memory Bank (Work in Progress)
 3) Number Guesser
 ------------------------------
 0) Exit Program
@@ -42,11 +45,36 @@ def main():
             print("The answer checker will then check if the answer to your problem was correct.")
             print("You'll have three attempts to get it right, then the correct answer will be revealed!\n")
 
-            num1 = input("Enter the first number: ")
+            
+            num1 = input("Enter the first number: ").strip()
+
+            while not num1.isdigit():
+                print("Please enter a valid number.")
+                num1 = input("Enter the first number: ").strip()
+
+
+            operation = input("Add (+), Subtract(-), Multiply(*), or Divide(/): ").strip()
+
+            while operation not in fn.MATH_SYMBOLS:
+                print("Please enter a valid operator.")
+                operation = input("Add (+), Subtract(-), Multiply(*), or Divide(/): ").strip()
             
             num2 = input("Enter the second number: ")
 
-            operator = input("placeholder")
+            while not num2.isdigit():
+                print("Please enter a valid number.")
+                num2 = input("Enter the second number: ").strip()
+
+            
+
+            # I though about putting this part in the logic layer, but since its just display
+            # and not any actual calculations, I kept it here.
+            print(f"\nYour math problem: {num1} {operation} {num2} = ?")
+            answer = input("Enter your answer: ")
+
+            # Program calculates answer a
+
+            
             pass
 
         elif choice == '2':
