@@ -4,6 +4,8 @@
 
 import logic as fn
 
+ANS_CHECKER_OPT = ['1','2']
+
 
 def menu():
     '''
@@ -12,7 +14,7 @@ def menu():
     print("""
 1) Answer Checker
 2) Memory Bank (Work in Progress)
-3) Number Guesser
+3) Number Guesser (Work in Progress)
 ------------------------------
 0) Exit Program
     """)
@@ -47,50 +49,101 @@ def main():
             print("The answer checker will then check if the answer to your problem was correct.")
             print("You'll have three attempts to get it right, then the correct answer will be revealed!\n")
 
-            num1 = input("Enter the first number: ").strip()
+            ans_check_sentinel = '1'
 
-            # Input validation.
-            while not num1.isdigit():
-                print("Please enter a valid number.")
-                num1 = input("Enter the first number: ").strip()
+            while ans_check_sentinel !=  '2':
+                num1 = input("\nEnter the first number: ").strip()
+
+                # Input validation.
+                while not num1.isdigit():
+                    print("Please enter a valid number.")
+                    num1 = input("\nEnter the first number: ").strip()
 
 
-            operation = input("Add (+), Subtract(-), Multiply(*), or Divide(/): ").strip()
+                operation = input("\nAdd (+), Subtract(-), Multiply(*), or Divide(/): ").strip()
 
-            # Input validation.
-            while operation not in fn.MATH_SYMBOLS:
-                print("Please enter a valid operator.")
-                operation = input("Add (+), Subtract(-), Multiply(*), or Divide(/): ").strip()
-            
-            num2 = input("Enter the second number: ")
+                # Input validation.
+                while operation not in fn.MATH_SYMBOLS:
+                    print("Please enter a valid operator.")
+                    operation = input("\nAdd (+), Subtract(-), Multiply(*), or Divide(/): ").strip()
+                
+                num2 = input("\nEnter the second number: ")
 
-            # Input validation.
-            while not num2.isdigit():
-                print("Please enter a valid number.")
-                num2 = input("Enter the second number: ").strip()
+                # Input validation.
+                while not num2.isdigit():
+                    print("Please enter a valid number.")
+                    num2 = input("\nEnter the second number: ").strip()
 
-            # I though about putting this part in the logic layer, but since its just display
-            # and not any actual calculations, I kept it here.
-            print(f"\nYour math problem: {num1} {operation} {num2} = ?")
-            answer = input("Enter your answer: ")
+                while num2 == '0' and operation == "/":
+                    # This message would need to be changed as to not confuse students when they use the actusl appliaction.
+                    # I just couldn't think of a consise and correct way to explain this right now.
+                    print(f"\nPlease select a number other than {num2} to divide {num1} by.")
+                    num2 = input("Enter the second number: ").strip()
 
-            correct = fn.calculate_answer(num1, operation, num2, answer)
-            print(correct)
+                # Initialize or re-initialize the attempts for this specific problem.
+                # I wanted to initialize this inside of the logic, but I wasnt sure how I wanted to implement it.
+                # I decided to store the attempts here, but keep the logic behind them in the logic file.
+                attempts = fn.ANSWER_CHECKER_ATTEMPTS
 
-            # Program calculates answer and if user answer was correct.
-            # TODO: Add attempt counter. Prompt user to redo this function or select another.
+                print(f"\nYour math problem: {num1} {operation} {num2} = ?")
+
+                # Counts the attempts that the user has and displays it.
+                answer = input(f"Enter your answer ({attempts} attempts left.): ")
+                # Calculate once, and skips 
+                correct, true_ans = fn.calculate_answer(num1, operation, num2, answer)
+
+                # Clearly and unmistakably tell the user their answer is correct.
+                if correct == True:
+                    print()
+                    print("-"*20 + " !!! CORRECT !!! " + "-"*20)
+
+                # This loop handles the attempts. The structure could be much better, though.
+                while attempts > 0 and correct == False:
+
+                    correct, attempts = fn.count_attempts(correct, attempts)
+
+                    # I thought about putting this part in the logic layer, but since its just display
+                    # and not any actual calculations, I kept it here.
+                    print()
+
+                    # Clearly and unmistakably tell the user their answer is incorrect.
+                    print("*"*20 + " INCORRECT " + "*"*20)
+
+                    if attempts <= 0:
+                        print(f"\nOut of attempts...")
+                        print(f"Here is the solution: {num1} {operation} {num2} = {true_ans} ")
+
+                    else:
+                        print(f"\nYour math problem: {num1} {operation} {num2} = ?")
+                        answer = input(f"Try again! ({attempts} attempts left.): ")
+
+                        correct, true_ans = fn.calculate_answer(num1, operation, num2, answer)
+
+                # Asks if you want to run answer checker again without going to menu.
+                # The web version wouldnt require you to do this, as answer checker would be the default function.
+                print("""\nWould you like to enter another problem?
+                1) Yes
+                2) Exit to main menu.
+                """)
+
+                # Just validates the answer to prevent issues if something wrong is inputted.
+                # Not really needed as this frontend will be changed very soon...
+                ans_check_sentinel = input("Enter a choice: ")
+                while ans_check_sentinel not in ANS_CHECKER_OPT:
+                    ans_check_sentinel = input("Please enter a valid choice: ")
 
 
         elif choice == '2':
             # Will call the python function that runs the 'Memory Bank' function.
             print("\n'Memory Bank' selected!")
             print("This function is still a work in progress. Please choose another.")
-            pass
+            
 
         elif choice == '3':
             # Will call the python function that runs the 'Number Guesser" function.
-            print("\nTesting... Testing... Choice chosen...")
-            pass
+            print("\n'Number Guesser' selected!")
+            print("This function is still a work in progress. Please choose another.")
+            
 
     
     
